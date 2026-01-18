@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ATS Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>ATS Resume Analyzer</h1>
+
+    <p class="privacy-note">
+      🔒 Privacy First: This application runs entirely in your browser.
+      Your resume data never leaves your device.
+    </p>
+
+    <label>Paste Your Resume Text</label>
+    <textarea id="resumeText" placeholder="Paste resume content here..."></textarea>
+
+    <label>Select Job Role</label>
+    <select id="jobRole">
+      <option value="software developer">Software Developer</option>
+    </select>
+
+    <button onclick="analyze()">Analyze Resume</button>
+
+    <div id="result" class="result hidden">
+      <h2>Match Result</h2>
+      <p><strong>Match Percentage:</strong> <span id="matchPercent"></span>%</p>
+
+      <ul>
+        <li>Technical Skills Score: <span id="techScore"></span></li>
+        <li>Soft Skills Score: <span id="softScore"></span></li>
+        <li>Experience Score: <span id="expScore"></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
